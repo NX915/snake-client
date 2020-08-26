@@ -22,6 +22,10 @@ const connect = function() {
     console.log('Server says: ', data);
   });
 
+  conn.on('close', () => {
+    console.log('Connection Lost!');
+  });
+
   return conn;
 };
 
